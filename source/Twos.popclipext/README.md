@@ -22,7 +22,7 @@ Save selected text to Today or another existing Twos list with one click.
 
 ## Use
 
-Select text in any app where PopClip works, then click the **2s** button (tooltip: **Add to Twos**). A check mark means the API returned a created item. Open Twos to see it.
+Select text in any app where PopClip works, then click the **Twos logo** button (tooltip: **Add to Twos**). A check mark means the API returned a created item. Open Twos to see it.
 
 - Today is resolved by Twos when you click, in your account's timezone. It is not fixed to the installation date and does not follow the list currently open in Twos.
 - Other destinations can be a list name, list ID, `tomorrow`, `yesterday`, or a date such as `2026-11-10`.
@@ -52,8 +52,11 @@ The key and selected text are sent only to `https://www.twosapp.com` over HTTPS,
 
 Banner: cropped from the [Twos public website](https://www.twosapp.com/), 3 November 2026. Website design and screenshot © Twos Technologies Inc.; the MIT license applies to this extension's code.
 
+Icon: the official monochrome Twos mark from the desktop app's `app-icons/mono.png` asset, prepared as a transparent 512 × 512 PNG for PopClip. The original mark's proportions are preserved and centered with padding. Twos logo © Twos Technologies Inc.
+
 ## Changelog
 
+- 1.1.2 (2026-11-03): Replaced the text icon with the official Twos logo, adapted for PopClip's monochrome toolbar.
 - 1.1.1 (2026-11-03): Clarified the data-transmission description for Sublist; capture behavior is unchanged.
 - 1.1.0 (2026-11-03): Added the default thing type dropdown (including new nested lists) and an optional default hashtag.
 - 1.0.3 (2026-11-03): Embedded an automatically looping GIF demo in the documentation.

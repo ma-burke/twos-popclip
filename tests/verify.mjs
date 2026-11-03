@@ -32,11 +32,12 @@ for (const name of files) {
   const path = new URL(name, root);
   const bytes = fs.readFileSync(path);
   assert.ok(bytes.length <= 1048576);
-  if (!name.startsWith('_images/') && name !== 'demo.mp4') assert.ok(!bytes.includes(0), 'Executable source must be readable');
+  if (!name.startsWith('_images/') && name !== 'demo.mp4' && name !== config.icon) assert.ok(!bytes.includes(0), 'Executable source must be readable');
   totalBytes += bytes.length;
 }
 assert.ok(totalBytes <= 2097152);
 assert.ok(files.includes('LICENSE') && files.includes('README.md'));
+assert.ok(files.includes(config.icon), 'The configured file icon must be included in the package');
 assert.match(fs.readFileSync(new URL('../../popclip-directory.yaml', root), 'utf8'), /include: "source\/Twos\.popclipext"\nversionPrefix: v/);
 assert.ok(fs.existsSync(new URL('../../LICENSE', root)));
 assert.deepEqual(config.entitlements, ['network']);

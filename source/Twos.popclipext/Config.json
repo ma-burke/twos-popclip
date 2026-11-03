@@ -4,7 +4,7 @@
   "description": "Add selected text to Today or another list in Twos.",
   "keywords": "NewTwos notes capture today list",
   "popclipVersion": 6221,
-  "icon": "square filled 2s",
+  "icon": "twos.png",
   "app": {
     "name": "Twos",
     "link": "https://www.twosapp.com/"

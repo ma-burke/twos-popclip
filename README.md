@@ -4,7 +4,7 @@
 
 Capture selected text to Today or another existing list in [Twos](https://www.twosapp.com/) (previously NewTwos).
 
-Choose **Today**, or choose **Other…** in the extension settings and enter a list name or ID. Click **2s** in PopClip to save the selection as one thing. The saved destination applies to future captures.
+Choose **Today**, or choose **Other…** in the extension settings and enter a list name or ID. Click the **Twos logo** in PopClip to save the selection as one thing. The saved destination applies to future captures.
 
 Choose a **Default thing type**: Dash, To-do, Bullet, Number, Note, or Sublist. **Sublist** creates a new nested list named from the selection. Optionally enter a **Default tag**, such as `reading`; the extension appends `#reading` automatically.
 
@@ -47,3 +47,5 @@ The extension uses PopClip's bundled Axios library to send one request to the [T
 [MIT](LICENSE). Independent extension; not an official Twos or PopClip product. The PopClip directory credits the owner of the submitting GitHub repository automatically.
 
 Banner screenshot: [Twos public website](https://www.twosapp.com/), © Twos Technologies Inc. The MIT license applies to this extension's code.
+
+Toolbar icon: official monochrome Twos artwork from the desktop app, adapted with a transparent background and proportional padding. Twos logo © Twos Technologies Inc.

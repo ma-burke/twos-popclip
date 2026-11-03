@@ -22,7 +22,7 @@ twos-popclip/
 
 A `.gitignore` is also included. Upload the contents of this folder as the repository root, so `popclip-directory.yaml` is at the root rather than inside an extra folder.
 
-The source package contains the required name, unique identifier, description, and minimum PopClip build. It includes an app website link, keywords, a text icon, readable JavaScript, a listing readme with a changelog and data-transmission disclosure, a banner, and an MIT license. It uses JavaScript rather than shell scripts and needs no helper executables.
+The source package contains the required name, unique identifier, description, and minimum PopClip build. It includes an app website link, keywords, the official Twos logo as a transparent PNG icon, readable JavaScript, a listing readme with a changelog and data-transmission disclosure, a banner, and an MIT license. It uses JavaScript rather than shell scripts and needs no helper executables.
 
 `demo.mp4` is a compressed version of the maintainer's recording. It is 10 seconds long, silent, and framed at 3:2 to fit PopClip's documented Featured demo proportions. It shows text selection, the PopClip action, and the result on Today. The directory automatically detects this file and excludes it from the downloaded installer. Placement in Featured remains at the directory maintainer's discretion.
 
@@ -32,7 +32,7 @@ On 3 November 2026, the maintainer confirmed successful testing of the original 
 
 1. Open `source/Twos.popclipext` with PopClip 2026.8.1 or later. Confirm the extension loads and both API key and destination settings appear.
 2. Create a Twos API key with `write:things` permission and, for Sublist, `write:lists`; enter it directly into PopClip's API key field.
-3. Select a short test sentence, choose **Today**, and click **2s**. Confirm the success tick and that exactly one new thing appears on today's Twos list.
+3. Select a short test sentence, choose **Today**, and click the **Twos logo**. Confirm the success tick and that exactly one new thing appears on today's Twos list.
 4. Choose **Other…**, enter a distinct existing list's exact name, capture a second sentence, and confirm it appears there. If needed, repeat using the list's 24-character ID.
 5. Capture text containing line breaks, quotation marks, an ampersand, and an emoji. Confirm it arrives as one thing. Twos may interpret Markdown; the extension does not preserve source rich text.
 6. Reopen extension settings and confirm the destination is retained.
