@@ -56,6 +56,8 @@ Icon: the official monochrome Twos mark from the desktop app's `app-icons/mono.p
 
 ## Changelog
 
+- 1.1.5 (2026-11-03): Replaced the demo with a new capture recording and a smoother 14 fps looping GIF.
+
 - 1.1.4 (2026-11-03): Added a purpose-made “Twos for PopClip” documentation banner.
 
 - 1.1.3 (2026-11-03): Added the native Twos bundle identifier to the app metadata; kept desktop installation optional for API captures.

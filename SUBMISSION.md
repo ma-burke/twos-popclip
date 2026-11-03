@@ -24,7 +24,7 @@ A `.gitignore` is also included. Upload the contents of this folder as the repos
 
 The source package contains the required name, unique identifier, description, and minimum PopClip build. It includes an app website link, keywords, the official Twos logo as a transparent PNG icon, readable JavaScript, a listing readme with a changelog and data-transmission disclosure, a banner, and an MIT license. It uses JavaScript rather than shell scripts and needs no helper executables.
 
-`demo.mp4` is a compressed version of the maintainer's recording. It is 10 seconds long, silent, and framed at 3:2 to fit PopClip's documented Featured demo proportions. It shows text selection, the PopClip action, and the result on Today. The directory automatically detects this file and excludes it from the downloaded installer. Placement in Featured remains at the directory maintainer's discretion.
+`demo.mp4` is a compressed version of the maintainer's recording. It is approximately 8.8 seconds long, silent, and framed at the original aspect ratio (approximately 1.68:1) to fit PopClip's documented Featured demo proportions. It shows text selection, the PopClip action, and the result on Today. The directory automatically detects this file and excludes it from the downloaded installer. Placement in Featured remains at the directory maintainer's discretion.
 
 ## Listing guideline review
 
