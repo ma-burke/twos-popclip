@@ -1,6 +1,6 @@
 # Twos for PopClip
 
-![Twos website header with a preview of the Today page](source/Twos.popclipext/_images/twos-header.png)
+![Twos for PopClip — save selected text to Today or a list of your choice](source/Twos.popclipext/_images/twos-header.png)
 
 Capture selected text to Today or another existing list in [Twos](https://www.twosapp.com/) (previously NewTwos).
 
@@ -48,6 +48,6 @@ The extension uses PopClip's bundled Axios library to send one request to the [T
 
 [MIT](LICENSE). Independent extension; not an official Twos or PopClip product. The PopClip directory credits the owner of the submitting GitHub repository automatically.
 
-Banner screenshot: [Twos public website](https://www.twosapp.com/), © Twos Technologies Inc. The MIT license applies to this extension's code.
+Banner: original artwork created for this extension, illustrating selected text being saved with PopClip. Includes the official Twos mark, © Twos Technologies Inc.; the MIT license applies to this extension's code.
 
 Toolbar icon: official monochrome Twos artwork from the desktop app, adapted with a transparent background and proportional padding. Twos logo © Twos Technologies Inc.

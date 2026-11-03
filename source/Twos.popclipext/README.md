@@ -1,6 +1,6 @@
 # Twos for PopClip
 
-![Twos website header with a preview of the Today page](_images/twos-header.png)
+![Twos for PopClip — save selected text to Today or a list of your choice](_images/twos-header.png)
 
 Save selected text to Today or another existing Twos list with one click.
 
@@ -50,11 +50,13 @@ The key and selected text are sent only to `https://www.twosapp.com` over HTTPS,
 
 `Config.json` defines the settings and action. `add.js` performs one API request for ordinary things, or two for a new sublist. There are no external executables to install; Axios is supplied by PopClip. This extension is provided under the included MIT license and is not an official Twos or PopClip extension.
 
-Banner: cropped from the [Twos public website](https://www.twosapp.com/), 3 November 2026. Website design and screenshot © Twos Technologies Inc.; the MIT license applies to this extension's code.
+Banner: original artwork created for this extension, illustrating selected text being saved with PopClip. Includes the official Twos mark, © Twos Technologies Inc.; the MIT license applies to this extension's code.
 
 Icon: the official monochrome Twos mark from the desktop app's `app-icons/mono.png` asset, prepared as a transparent 512 × 512 PNG for PopClip. The original mark's proportions are preserved and centered with padding. Twos logo © Twos Technologies Inc.
 
 ## Changelog
+
+- 1.1.4 (2026-11-03): Added a purpose-made “Twos for PopClip” documentation banner.
 
 - 1.1.3 (2026-11-03): Added the native Twos bundle identifier to the app metadata; kept desktop installation optional for API captures.
 
