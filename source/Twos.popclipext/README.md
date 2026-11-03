@@ -6,7 +6,9 @@ Save selected text to Today or another existing Twos list with one click.
 
 ## Demo
 
-[Watch the 10-second demo](demo.mp4): select text, click **Add to Twos** in PopClip, and see it appear on Today.
+![Demo: select text, click Add to Twos in PopClip, and see it appear on Today](_images/demo.gif)
+
+[Watch the MP4 version](demo.mp4).
 
 ## Install and configure
 
@@ -41,6 +43,7 @@ Banner: cropped from the [Twos public website](https://www.twosapp.com/), 3 Nove
 
 ## Changelog
 
+- 1.0.3 (2026-11-03): Embedded an automatically looping GIF demo in the documentation.
 - 1.0.2 (2026-11-03): Added a silent video demonstrating capture to Today. Extension behavior is unchanged.
 - 1.0.1 (2026-11-03): Added a documentation banner showing the Twos website and Today preview. Extension behavior is unchanged.
 - 1.0.0 (2026-11-03): Initial release, with capture to Today or a saved list name or ID.
