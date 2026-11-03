@@ -26,6 +26,10 @@ The source package contains the required name, unique identifier, description, a
 
 `demo.mp4` is a compressed version of the maintainer's recording. It is 10 seconds long, silent, and framed at 3:2 to fit PopClip's documented Featured demo proportions. It shows text selection, the PopClip action, and the result on Today. The directory automatically detects this file and excludes it from the downloaded installer. Placement in Featured remains at the directory maintainer's discretion.
 
+## Listing guideline review
+
+See [LISTING-REVIEW.md](LISTING-REVIEW.md) for the six-point audit, verified bundle identifier, and Apple signing evidence. The official Mac download is an App Store distribution; a separate Developer ID/notarized build has not been verified, so this exact listing requirement remains for the directory maintainer to assess.
+
 ## 1. Live validation
 
 On 3 November 2026, the maintainer confirmed successful testing of the original capture behavior. The preparer did not independently observe that live test. All 78 simulated scenarios pass for version 1.1.0; live verification of its new type, tag, and sublist settings remains outstanding. Use the following checklist:

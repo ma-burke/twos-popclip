@@ -14,6 +14,8 @@ assert.ok(!config.identifier.startsWith('com.pilotmoon.'));
 assert.ok(Number.isInteger(config.popclipVersion) && config.popclipVersion > 0);
 assert.equal(config.app.name, 'Twos');
 assert.equal(config.app.link, 'https://www.twosapp.com/');
+assert.deepEqual(config.app.bundleIdentifiers, ['com.ionicframework.up335358']);
+assert.equal(config.app.checkInstalled, false, 'API capture must work without the native app');
 assert.equal(typeof config.keywords, 'string');
 assert.equal(config.shellScript, undefined);
 assert.equal(config.shellScriptFile, undefined);

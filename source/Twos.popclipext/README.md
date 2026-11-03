@@ -29,7 +29,7 @@ Select text in any app where PopClip works, then click the **Twos logo** button 
 - Ordinary captures create one thing of your selected type, including for a selection containing line breaks. **Note** creates plain text without a bullet or checkbox.
 - A default tag is appended to the selected text and sent as a Twos tag. For example, `Read later` with tag `reading` becomes `Read later #reading`. An existing matching hashtag is not appended again; matching ignores case. Other visible hashtags are retained.
 - The extension preserves the selected text for ordinary captures and does not append a source URL. Twos may interpret Markdown within that text; original rich text styling is not captured.
-- Internet access is required. Twos does not need to be running.
+- Internet access and a Twos account with an API key are required. The Twos desktop app is optional: captures go directly to the Twos service, so the app does not need to be installed or running.
 - To change the destination or API key later, open this extension's settings in PopClip.
 
 ### Sublists
@@ -55,6 +55,8 @@ Banner: cropped from the [Twos public website](https://www.twosapp.com/), 3 Nove
 Icon: the official monochrome Twos mark from the desktop app's `app-icons/mono.png` asset, prepared as a transparent 512 × 512 PNG for PopClip. The original mark's proportions are preserved and centered with padding. Twos logo © Twos Technologies Inc.
 
 ## Changelog
+
+- 1.1.3 (2026-11-03): Added the native Twos bundle identifier to the app metadata; kept desktop installation optional for API captures.
 
 - 1.1.2 (2026-11-03): Replaced the text icon with the official Twos logo, adapted for PopClip's monochrome toolbar.
 - 1.1.1 (2026-11-03): Clarified the data-transmission description for Sublist; capture behavior is unchanged.

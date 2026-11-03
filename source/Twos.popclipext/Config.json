@@ -7,9 +7,15 @@
   "icon": "twos.png",
   "app": {
     "name": "Twos",
-    "link": "https://www.twosapp.com/"
+    "link": "https://www.twosapp.com/",
+    "bundleIdentifiers": [
+      "com.ionicframework.up335358"
+    ],
+    "checkInstalled": false
   },
-  "entitlements": ["network"],
+  "entitlements": [
+    "network"
+  ],
   "options": [
     {
       "identifier": "apikey",
@@ -22,8 +28,12 @@
       "identifier": "destination",
       "type": "multiple",
       "label": "Add to list",
-      "values": ["today"],
-      "valueLabels": ["Today"],
+      "values": [
+        "today"
+      ],
+      "valueLabels": [
+        "Today"
+      ],
       "defaultValue": "today",
       "allowOther": true,
       "description": "Choose Today, or Other… and enter an existing list's exact name or list ID. Tomorrow, yesterday, and YYYY-MM-DD also work."
@@ -32,8 +42,22 @@
       "identifier": "thingtype",
       "type": "multiple",
       "label": "Default thing type",
-      "values": ["dash", "todo", "bullet", "number", "none", "sublist"],
-      "valueLabels": ["Dash", "To-do", "Bullet", "Number", "Note", "Sublist"],
+      "values": [
+        "dash",
+        "todo",
+        "bullet",
+        "number",
+        "none",
+        "sublist"
+      ],
+      "valueLabels": [
+        "Dash",
+        "To-do",
+        "Bullet",
+        "Number",
+        "Note",
+        "Sublist"
+      ],
       "defaultValue": "dash",
       "description": "Sublist creates a new list named from the selection and links it inside the destination."
     },
@@ -46,7 +70,9 @@
     }
   ],
   "title": "Add to Twos",
-  "requirements": ["text"],
+  "requirements": [
+    "text"
+  ],
   "javaScriptFile": "add.js",
   "after": "show-status"
 }

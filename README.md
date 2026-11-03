@@ -26,6 +26,8 @@ Source repository: [ma-burke/twos-popclip](https://github.com/ma-burke/twos-popc
 
 Initial release: **v1.0.0**. The PopClip Directory app is installed for this repository. The repository owner approved its access and the submission agreement on 3 November 2026. The tagged commit's **Submission Check** and directory-app comment are the authoritative submission status; directory publication requires human review.
 
+The [listing review](LISTING-REVIEW.md) records the guideline audit and the remaining app-distribution question.
+
 The [submission guide](SUBMISSION.md) follows [PopClip's official submission process](https://www.popclip.app/extensions/submit). The submission is the readable `source/Twos.popclipext` directory, not a zipped installer.
 
 ## Development and validation
