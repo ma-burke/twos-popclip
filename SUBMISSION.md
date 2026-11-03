@@ -28,14 +28,17 @@ The source package contains the required name, unique identifier, description, a
 
 ## 1. Live validation
 
-On 3 November 2026, the maintainer confirmed that they had successfully tested the extension. The preparer did not independently observe that live test. All 25 simulated scenarios also pass. The following checklist can be used when testing future changes:
+On 3 November 2026, the maintainer confirmed successful testing of the original capture behavior. The preparer did not independently observe that live test. All 78 simulated scenarios pass for version 1.1.0; live verification of its new type, tag, and sublist settings remains outstanding. Use the following checklist:
 
 1. Open `source/Twos.popclipext` with PopClip 2026.8.1 or later. Confirm the extension loads and both API key and destination settings appear.
-2. Create a Twos API key with `write:things` permission and enter it directly into PopClip's API key field.
+2. Create a Twos API key with `write:things` permission and, for Sublist, `write:lists`; enter it directly into PopClip's API key field.
 3. Select a short test sentence, choose **Today**, and click **2s**. Confirm the success tick and that exactly one new thing appears on today's Twos list.
 4. Choose **Other…**, enter a distinct existing list's exact name, capture a second sentence, and confirm it appears there. If needed, repeat using the list's 24-character ID.
 5. Capture text containing line breaks, quotation marks, an ampersand, and an emoji. Confirm it arrives as one thing. Twos may interpret Markdown; the extension does not preserve source rich text.
 6. Reopen extension settings and confirm the destination is retained.
+7. Try each ordinary type: Dash, To-do, Bullet, Number, and Note. Confirm each saved thing has the selected type.
+8. Set the default tag to `reading`, then `#reading`; confirm each capture gets one `#reading` tag. Try text that already includes `#reading` and confirm no duplicate is appended. Clear the setting and confirm no default tag is added.
+9. Choose Sublist and capture a short title. Confirm a new list is linked inside the chosen destination. With a default tag, confirm it appears in the title and parent entry. A new list is created on each successful click.
 
 For future updates, record the tested PopClip/macOS versions and observed results when available. Record code changes in the package changelog before tagging.
 

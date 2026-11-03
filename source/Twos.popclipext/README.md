@@ -14,9 +14,11 @@ Save selected text to Today or another existing Twos list with one click.
 
 1. Use PopClip 2026.8.1 (build 6221) or later.
 2. Open the **Twos.popclipext** package or a **Twos.popclipextz** installer with PopClip and approve installation. Source packages are unsigned; the PopClip directory signs extensions after review.
-3. In [Twos → Settings → API Keys](https://www.twosapp.com/settings/api-keys), create a personal API key with **write:things** permission. No read or list-management permission is needed by this extension.
+3. In [Twos → Settings → API Keys](https://www.twosapp.com/settings/api-keys), create a personal API key with **write:things** permission. To use **Sublist**, also grant **write:lists**. No read permission is required.
 4. In PopClip's extension settings for **Twos**, paste the key into **API key**. PopClip stores this secret in this Mac's Keychain; the key is not embedded in the extension.
 5. Set **Add to list** to **Today**, or choose **Other…** and enter an existing list's exact name or 24-character list ID. An ID is useful if several lists have the same name. This is a saved destination field, not a live dropdown of all your Twos lists.
+6. Set **Default thing type** to **Dash**, **To-do**, **Bullet**, **Number**, **Note**, or **Sublist**. Dash is the default.
+7. Optionally enter a **Default tag**, such as `reading` or `#reading`. The extension adds one `#` automatically. Leave it empty to add no default tag. Use a single tag without spaces; letters, numbers, underscores and hyphens are supported.
 
 ## Use
 
@@ -24,25 +26,35 @@ Select text in any app where PopClip works, then click the **2s** button (toolti
 
 - Today is resolved by Twos when you click, in your account's timezone. It is not fixed to the installation date and does not follow the list currently open in Twos.
 - Other destinations can be a list name, list ID, `tomorrow`, `yesterday`, or a date such as `2026-11-10`.
-- Each click creates one thing, including for a selection containing line breaks. Your Twos default thing type is used.
-- The extension sends the full selected text without trimming it or appending a source URL. Twos may interpret Markdown within that text; original rich text styling is not captured.
+- Ordinary captures create one thing of your selected type, including for a selection containing line breaks. **Note** creates plain text without a bullet or checkbox.
+- A default tag is appended to the selected text and sent as a Twos tag. For example, `Read later` with tag `reading` becomes `Read later #reading`. An existing matching hashtag is not appended again; matching ignores case. Other visible hashtags are retained.
+- The extension preserves the selected text for ordinary captures and does not append a source URL. Twos may interpret Markdown within that text; original rich text styling is not captured.
 - Internet access is required. Twos does not need to be running.
 - To change the destination or API key later, open this extension's settings in PopClip.
 
+### Sublists
+
+**Sublist** creates a new, empty Twos list, then places its native sublist link in your chosen destination. The selection becomes the list's title; line breaks and repeated spaces are collapsed into single spaces. If a default tag is set, it is appended to that title and applied to the parent entry. Each successful capture creates a new list, even if another list has the same name.
+
+For example, select `Trip ideas`, choose **Sublist**, and use tag `travel`: a new list named `Trip ideas #travel` is linked from Today (or your saved destination). This requires both **write:lists** and **write:things** on the API key.
+
 ## If it fails
 
-A missing/invalid key, missing permission, or rejected list opens extension settings. Confirm the **write:things** permission and destination spelling; use the list ID for duplicate names. Other errors show PopClip's failure indicator. If a connection times out or a server response is unexpected, check the destination in Twos before clicking again: the save may already have happened. The extension does not retry automatically or queue offline captures.
+A missing/invalid key, invalid setting, missing permission, or rejected destination opens extension settings when no new sublist has been confirmed. Check **write:things**, and **write:lists** for Sublist, plus the destination spelling; use the list ID for duplicate names. Other errors show PopClip's failure indicator. If a connection times out or a server response is unexpected, check Twos before clicking again: the save may already have happened. The extension does not retry automatically or queue offline captures.
+
+Sublist creation and placement are separate writes. If the new list is created but the destination link fails, the list remains in Twos. Check **Lists** and your destination; you can use Twos' **Add to** action to place the existing new list instead of capturing again. The extension does not delete the new list on a failed placement.
 
 The key and selected text are sent only to `https://www.twosapp.com/api/v1/things` over HTTPS. There is no analytics or helper service.
 
 ## Source
 
-`Config.json` defines the settings and action. `add.js` performs one API request. There are no external executables to install; Axios is supplied by PopClip. This extension is provided under the included MIT license and is not an official Twos or PopClip extension.
+`Config.json` defines the settings and action. `add.js` performs one API request for ordinary things, or two for a new sublist. There are no external executables to install; Axios is supplied by PopClip. This extension is provided under the included MIT license and is not an official Twos or PopClip extension.
 
 Banner: cropped from the [Twos public website](https://www.twosapp.com/), 3 November 2026. Website design and screenshot © Twos Technologies Inc.; the MIT license applies to this extension's code.
 
 ## Changelog
 
+- 1.1.0 (2026-11-03): Added the default thing type dropdown (including new nested lists) and an optional default hashtag.
 - 1.0.3 (2026-11-03): Embedded an automatically looping GIF demo in the documentation.
 - 1.0.2 (2026-11-03): Added a silent video demonstrating capture to Today. Extension behavior is unchanged.
 - 1.0.1 (2026-11-03): Added a documentation banner showing the Twos website and Today preview. Extension behavior is unchanged.
