@@ -24,9 +24,9 @@ A `.gitignore` is also included. Upload the contents of this folder as the repos
 
 The source package contains the required name, unique identifier, description, and minimum PopClip build. It includes an app website link, keywords, a text icon, readable JavaScript, a listing readme with a changelog and data-transmission disclosure, and an MIT license. It uses JavaScript rather than shell scripts and needs no helper executables. A demo is optional for ordinary submission and is not included.
 
-## 1. Complete the live check
+## 1. Live validation
 
-These checks have not been completed by the preparer because no personal API key was supplied. The 25 simulated scenarios pass, but they do not establish that an authenticated request succeeds in PopClip.
+On 3 November 2026, the maintainer confirmed that they had successfully tested the extension. The preparer did not independently observe that live test. All 25 simulated scenarios also pass. The following checklist can be used when testing future changes:
 
 1. Open `source/Twos.popclipext` with PopClip 2026.8.1 or later. Confirm the extension loads and both API key and destination settings appear.
 2. Create a Twos API key with `write:things` permission and enter it directly into PopClip's API key field.
@@ -35,7 +35,7 @@ These checks have not been completed by the preparer because no personal API key
 5. Capture text containing line breaks, quotation marks, an ampersand, and an emoji. Confirm it arrives as one thing. Twos may interpret Markdown; the extension does not preserve source rich text.
 6. Reopen extension settings and confirm the destination is retained.
 
-After the live checks pass, replace the outstanding-validation statement in the repository README with the tested PopClip/macOS versions and observed result. Record any code changes in the package changelog before tagging.
+For future updates, record the tested PopClip/macOS versions and observed results when available. Record code changes in the package changelog before tagging.
 
 ## 2. Public source repository
 
@@ -47,9 +47,9 @@ Do not upload your personal API key. It belongs in PopClip's secret setting only
 
 ## 3. Review the agreement and install the GitHub app
 
-The repository owner should read the [submission agreement](https://www.popclip.app/extensions/submit#submission-agreement) before submitting. It covers permission to distribute, responsibility for maintenance, and the review process.
+The repository owner approved the [submission agreement](https://www.popclip.app/extensions/submit#submission-agreement) and installation on 3 November 2026. It covers permission to distribute, responsibility for maintenance, and the review process.
 
-Install the [PopClip Directory GitHub app](https://github.com/apps/popclip-directory) on this repository. Select only this repository when granting access. The documented app permissions are read access to code and read/write access to checks; it cannot modify the code.
+The [PopClip Directory GitHub app](https://github.com/apps/popclip-directory) is installed with only `ma-burke/twos-popclip` selected. Its permissions are read access to code and metadata and read/write access to checks; it cannot modify the code. Keep this scope when updating the installation.
 
 ## 4. Submit version 1.0.0
 

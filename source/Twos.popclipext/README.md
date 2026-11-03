@@ -33,4 +33,4 @@ The key and selected text are sent only to `https://www.twosapp.com/api/v1/thing
 
 ## Changelog
 
-- 1.0.0 (submission candidate, 2026-11-03): Initial version, with capture to Today or a saved list name or ID.
+- 1.0.0 (2026-11-03): Initial release, with capture to Today or a saved list name or ID.

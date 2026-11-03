@@ -12,11 +12,11 @@ Open `source/Twos.popclipext` with PopClip, approve the unsigned source extensio
 
 See the [extension readme](source/Twos.popclipext/README.md) for full setup, destination behavior, data handling, and troubleshooting.
 
-## Submission status
+## Directory submission
 
 Source repository: [ma-burke/twos-popclip](https://github.com/ma-burke/twos-popclip).
 
-Prepared for an initial **v1.0.0** submission. Not yet submitted or published in the PopClip directory; authenticated testing and the repository owner's approval of the Directory app and submission agreement remain outstanding.
+Initial release: **v1.0.0**. The PopClip Directory app is installed for this repository. The repository owner approved its access and the submission agreement on 3 November 2026. The tagged commit's **Submission Check** and directory-app comment are the authoritative submission status; directory publication requires human review.
 
 The [submission guide](SUBMISSION.md) follows [PopClip's official submission process](https://www.popclip.app/extensions/submit). The submission is the readable `source/Twos.popclipext` directory, not a zipped installer.
 
@@ -30,7 +30,7 @@ node tests/verify.mjs
 
 Node.js is needed only for these development checks, not for using the extension. The checks use simulated API responses and do not contact Twos or modify an account.
 
-Verified locally: 25 simulated capture scenarios, destination routing, text preservation, error handling, metadata, referenced files, and PopClip submission file-size limits. An authenticated save from PopClip has not yet been verified. Complete the live checks in `SUBMISSION.md` before creating the first submission tag.
+Verified locally: 25 simulated capture scenarios, destination routing, text preservation, error handling, metadata, referenced files, and PopClip submission file-size limits. The maintainer reported a successful live test of the extension on 3 November 2026. That live result was reported by the maintainer, rather than independently observed by the preparer.
 
 The extension uses PopClip's bundled Axios library to send one request to the [Twos API](https://www.twosapp.com/api/v1/openapi.json). No API key is included in this repository.
 
