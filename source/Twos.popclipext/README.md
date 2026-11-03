@@ -44,7 +44,7 @@ A missing/invalid key, invalid setting, missing permission, or rejected destinat
 
 Sublist creation and placement are separate writes. If the new list is created but the destination link fails, the list remains in Twos. Check **Lists** and your destination; you can use Twos' **Add to** action to place the existing new list instead of capturing again. The extension does not delete the new list on a failed placement.
 
-The key and selected text are sent only to `https://www.twosapp.com/api/v1/things` over HTTPS. There is no analytics or helper service.
+The key and selected text are sent only to `https://www.twosapp.com` over HTTPS, including when creating a new sublist. There is no analytics or helper service.
 
 ## Source
 
@@ -54,6 +54,7 @@ Banner: cropped from the [Twos public website](https://www.twosapp.com/), 3 Nove
 
 ## Changelog
 
+- 1.1.1 (2026-11-03): Clarified the data-transmission description for Sublist; capture behavior is unchanged.
 - 1.1.0 (2026-11-03): Added the default thing type dropdown (including new nested lists) and an optional default hashtag.
 - 1.0.3 (2026-11-03): Embedded an automatically looping GIF demo in the documentation.
 - 1.0.2 (2026-11-03): Added a silent video demonstrating capture to Today. Extension behavior is unchanged.
