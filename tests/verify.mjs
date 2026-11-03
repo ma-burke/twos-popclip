@@ -32,7 +32,7 @@ for (const name of files) {
   const path = new URL(name, root);
   const bytes = fs.readFileSync(path);
   assert.ok(bytes.length <= 1048576);
-  if (!name.startsWith('_images/')) assert.ok(!bytes.includes(0), 'Executable source must be readable');
+  if (!name.startsWith('_images/') && name !== 'demo.mp4') assert.ok(!bytes.includes(0), 'Executable source must be readable');
   totalBytes += bytes.length;
 }
 assert.ok(totalBytes <= 2097152);

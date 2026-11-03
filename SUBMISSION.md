@@ -22,7 +22,9 @@ twos-popclip/
 
 A `.gitignore` is also included. Upload the contents of this folder as the repository root, so `popclip-directory.yaml` is at the root rather than inside an extra folder.
 
-The source package contains the required name, unique identifier, description, and minimum PopClip build. It includes an app website link, keywords, a text icon, readable JavaScript, a listing readme with a changelog and data-transmission disclosure, and an MIT license. It uses JavaScript rather than shell scripts and needs no helper executables. A demo is optional for ordinary submission and is not included.
+The source package contains the required name, unique identifier, description, and minimum PopClip build. It includes an app website link, keywords, a text icon, readable JavaScript, a listing readme with a changelog and data-transmission disclosure, a banner, and an MIT license. It uses JavaScript rather than shell scripts and needs no helper executables.
+
+`demo.mp4` is a compressed version of the maintainer's recording. It is 10 seconds long, silent, and framed at 3:2 to fit PopClip's documented Featured demo proportions. It shows text selection, the PopClip action, and the result on Today. The directory automatically detects this file and excludes it from the downloaded installer. Placement in Featured remains at the directory maintainer's discretion.
 
 ## 1. Live validation
 

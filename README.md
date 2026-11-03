@@ -6,6 +6,8 @@ Capture selected text to Today or another existing list in [Twos](https://www.tw
 
 Choose **Today**, or choose **Other…** in the extension settings and enter a list name or ID. Click **2s** in PopClip to save the selection as one thing. The saved destination applies to future captures.
 
+[Watch the 10-second demo](source/Twos.popclipext/demo.mp4).
+
 Requires **PopClip 2026.8.1 (build 6221) or later**, internet access, and a Twos personal API key with **write:things** permission. No additional executable or running Twos app is needed.
 
 ## Install
