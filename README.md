@@ -1,5 +1,7 @@
 # Twos for PopClip
 
+![Twos website header with a preview of the Today page](source/Twos.popclipext/_images/twos-header.png)
+
 Capture selected text to Today or another existing list in [Twos](https://www.twosapp.com/) (previously NewTwos).
 
 Choose **Today**, or choose **Other…** in the extension settings and enter a list name or ID. Click **2s** in PopClip to save the selection as one thing. The saved destination applies to future captures.
@@ -37,3 +39,5 @@ The extension uses PopClip's bundled Axios library to send one request to the [T
 ## License and attribution
 
 [MIT](LICENSE). Independent extension; not an official Twos or PopClip product. The PopClip directory credits the owner of the submitting GitHub repository automatically.
+
+Banner screenshot: [Twos public website](https://www.twosapp.com/), © Twos Technologies Inc. The MIT license applies to this extension's code.

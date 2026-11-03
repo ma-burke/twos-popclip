@@ -17,15 +17,22 @@ assert.equal(config.app.link, 'https://www.twosapp.com/');
 assert.equal(typeof config.keywords, 'string');
 assert.equal(config.shellScript, undefined);
 assert.equal(config.shellScriptFile, undefined);
-const files = fs.readdirSync(root);
+function packageFiles(folder, prefix = '') {
+  return fs.readdirSync(folder, {withFileTypes: true}).flatMap(entry => {
+    const name = prefix + entry.name;
+    return entry.isDirectory()
+      ? packageFiles(new URL(entry.name + '/', folder), name + '/')
+      : [name];
+  });
+}
+const files = packageFiles(root);
 assert.ok(files.length <= 100);
 let totalBytes = 0;
 for (const name of files) {
   const path = new URL(name, root);
-  assert.ok(fs.statSync(path).isFile(), 'Package contains only the intended readable source files');
   const bytes = fs.readFileSync(path);
   assert.ok(bytes.length <= 1048576);
-  assert.ok(!bytes.includes(0), 'No binary files');
+  if (!name.startsWith('_images/')) assert.ok(!bytes.includes(0), 'Executable source must be readable');
   totalBytes += bytes.length;
 }
 assert.ok(totalBytes <= 2097152);

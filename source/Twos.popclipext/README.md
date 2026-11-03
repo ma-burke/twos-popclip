@@ -1,5 +1,7 @@
 # Twos for PopClip
 
+![Twos website header with a preview of the Today page](_images/twos-header.png)
+
 Save selected text to Today or another existing Twos list with one click.
 
 ## Install and configure
@@ -31,6 +33,9 @@ The key and selected text are sent only to `https://www.twosapp.com/api/v1/thing
 
 `Config.json` defines the settings and action. `add.js` performs one API request. There are no external executables to install; Axios is supplied by PopClip. This extension is provided under the included MIT license and is not an official Twos or PopClip extension.
 
+Banner: cropped from the [Twos public website](https://www.twosapp.com/), 3 November 2026. Website design and screenshot © Twos Technologies Inc.; the MIT license applies to this extension's code.
+
 ## Changelog
 
+- 1.0.1 (2026-11-03): Added a documentation banner showing the Twos website and Today preview. Extension behavior is unchanged.
 - 1.0.0 (2026-11-03): Initial release, with capture to Today or a saved list name or ID.
