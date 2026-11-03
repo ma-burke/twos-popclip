@@ -1,0 +1,79 @@
+# Submit Twos to the PopClip directory
+
+Prepared on 3 November 2026 against the [official submission instructions](https://www.popclip.app/extensions/submit).
+
+## Prepared files
+
+```text
+twos-popclip/
+├── LICENSE
+├── README.md
+├── SUBMISSION.md
+├── popclip-directory.yaml
+├── source/
+│   └── Twos.popclipext/
+│       ├── Config.json
+│       ├── add.js
+│       ├── LICENSE
+│       └── README.md
+└── tests/
+    └── verify.mjs
+```
+
+A `.gitignore` is also included. Upload the contents of this folder as the repository root, so `popclip-directory.yaml` is at the root rather than inside an extra folder.
+
+The source package contains the required name, unique identifier, description, and minimum PopClip build. It includes an app website link, keywords, a text icon, readable JavaScript, a listing readme with a changelog and data-transmission disclosure, and an MIT license. It uses JavaScript rather than shell scripts and needs no helper executables. A demo is optional for ordinary submission and is not included.
+
+## 1. Complete the live check
+
+These checks have not been completed by the preparer because no personal API key was supplied. The 25 simulated scenarios pass, but they do not establish that an authenticated request succeeds in PopClip.
+
+1. Open `source/Twos.popclipext` with PopClip 2026.8.1 or later. Confirm the extension loads and both API key and destination settings appear.
+2. Create a Twos API key with `write:things` permission and enter it directly into PopClip's API key field.
+3. Select a short test sentence, choose **Today**, and click **2s**. Confirm the success tick and that exactly one new thing appears on today's Twos list.
+4. Choose **Other…**, enter a distinct existing list's exact name, capture a second sentence, and confirm it appears there. If needed, repeat using the list's 24-character ID.
+5. Capture text containing line breaks, quotation marks, an ampersand, and an emoji. Confirm it arrives as one thing. Twos may interpret Markdown; the extension does not preserve source rich text.
+6. Reopen extension settings and confirm the destination is retained.
+
+After the live checks pass, replace the outstanding-validation statement in the repository README with the tested PopClip/macOS versions and observed result. Record any code changes in the package changelog before tagging.
+
+## 2. Public source repository
+
+The public repository is [ma-burke/twos-popclip](https://github.com/ma-burke/twos-popclip). These source files belong at its root. Repository creation and source upload are separate from submitting the extension to the directory.
+
+Keep the package path `source/Twos.popclipext` and identifier `local.twos.capture.01a1a08c` stable. PopClip permanently associates a submitted extension with its repository, package path, and identifier. The initial personal installer uses the same identifier.
+
+Do not upload your personal API key. It belongs in PopClip's secret setting only.
+
+## 3. Review the agreement and install the GitHub app
+
+The repository owner should read the [submission agreement](https://www.popclip.app/extensions/submit#submission-agreement) before submitting. It covers permission to distribute, responsibility for maintenance, and the review process.
+
+Install the [PopClip Directory GitHub app](https://github.com/apps/popclip-directory) on this repository. Select only this repository when granting access. The documented app permissions are read access to code and read/write access to checks; it cannot modify the code.
+
+## 4. Submit version 1.0.0
+
+After the repository files are uploaded and the GitHub app is installed, create a GitHub release with a new tag **v1.0.0** targeting the commit containing these files. Suggested release title: **Twos 1.0.0**.
+
+Suggested release notes:
+
+> Initial release: capture selected text to Today or an existing list in Twos. Includes a saved destination setting, a Keychain-stored API key, and handling for API and connection failures. Requires PopClip 2026.8.1 or later and a Twos API key with write:things permission.
+
+The `v` prefix matches `versionPrefix: v` in `popclip-directory.yaml`. For a local Git workflow with an `origin` already configured and a branch named `main`, the equivalent is:
+
+```sh
+git tag v1.0.0
+git push origin main v1.0.0
+```
+
+This is the submission step. A local tag or uploaded `.popclipextz` alone does not submit the extension.
+
+## 5. Check the result
+
+Open the tagged commit on GitHub and look for **Submission Check** and a comment from the directory app.
+
+- **Received**: automated validation passed; queued for human review.
+- **Could not be processed**: read the reported error, fix the source, and push a higher version tag, such as `v1.0.1`.
+- **Published**: the comment provides the live extension link. Update the repository README with that link and the publication status.
+
+The directory reads each tag once. Use a new, higher version tag for every resubmission or update. Human review may take several days or longer. Publication and front-page listing are separate decisions; a demo MP4 is needed only for Featured eligibility, not ordinary submission.

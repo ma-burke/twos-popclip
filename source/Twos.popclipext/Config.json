@@ -1,0 +1,36 @@
+{
+  "name": "Twos",
+  "identifier": "local.twos.capture.01a1a08c",
+  "description": "Add selected text to Today or another list in Twos.",
+  "keywords": "NewTwos notes capture today list",
+  "popclipVersion": 6221,
+  "icon": "square filled 2s",
+  "app": {
+    "name": "Twos",
+    "link": "https://www.twosapp.com/"
+  },
+  "entitlements": ["network"],
+  "options": [
+    {
+      "identifier": "apikey",
+      "type": "secret",
+      "label": "API key",
+      "description": "Create a key in Twos Settings → API Keys with write:things permission. https://www.twosapp.com/settings/api-keys",
+      "keychain": "local"
+    },
+    {
+      "identifier": "destination",
+      "type": "multiple",
+      "label": "Add to list",
+      "values": ["today"],
+      "valueLabels": ["Today"],
+      "defaultValue": "today",
+      "allowOther": true,
+      "description": "Choose Today, or Other… and enter an existing list's exact name or list ID. Tomorrow, yesterday, and YYYY-MM-DD also work."
+    }
+  ],
+  "title": "Add to Twos",
+  "requirements": ["text"],
+  "javaScriptFile": "add.js",
+  "after": "show-status"
+}

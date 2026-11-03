@@ -1,0 +1,6 @@
+.DS_Store
+._*
+*.popclipextz
+*.zip
+.env
+.env.*
